@@ -1,0 +1,93 @@
+
+-----------routing--------------------------
+   npm i --save react-router-dom
+
+main.jsx
+render(
+<BrowserRouter>
+<APP/>
+</BrowserRouter>
+)
+
+
+src-> components -> Home.jsx 
+                    Entry.jsx 
+                    Library.jsx
+                    Nav.jsx
+Nav.jsx
+/// par anchor tags se page reload hoga to we use link tag
+return <nav> 
+
+<link>
+
+
+</link>
+
+</nav>
+
+
+
+App.jsx
+ <Nav>
+ <Routes>
+<Route path="/" element ={<Home/>}  />
+<Route path="/Create" element ={<Library/>}  />
+</Routes>
+</Nav>
+ HOME.jsx
+
+
+
+--useNavigate-------
+const navigate =useNavigate();
+
+const submithandler= ()=>
+{
+    //send the data to db
+    //and switch the page
+    navigate(/Show);
+    //navigate(1); aage page 1 bar badane k liye 
+    //navigate(-1) page ek baar piche krne k liye 
+}
+
+
+
+-----Dynamic Routing---------------------------
+
+child route-
+dynamic route-
+App.jsx
+<Route path="/Create/:id" element ={<Details/>}  />
+
+Library.jsx
+ li bnao show krne k liye
+
+ Details.jsx
+
+ useparams ko import kro 
+  <div>
+        <h1>Details</h1>
+        <h1>
+            Book Id:<span className='font-extrabold'>{id} </span>
+        </h1>
+    </div>
+
+
+--------API CALLING-----------
+npm i --save axios
+
+import axios
+
+const getusers= ()=>{
+.axios
+.get("")
+.then
+.catch()
+}
+
+
+
+
+
+async 
+
